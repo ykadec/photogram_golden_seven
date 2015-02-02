@@ -63,12 +63,12 @@ Once you run through the setup, you will already have a table created called `ph
 
 I have also already added two routes:
 
-    get("/all_photos", { :controller => "photos", :action => "index" })
-    get("/photo_details", { :controller => "photos", :action => "show" })
+    get("/photos",     { :controller => "photos", :action => "index" })
+    get("/photos/:id", { :controller => "photos", :action => "show" })
 
 (as well as a route for the bare domain, which also goes to the `index` action). The first one is to let users see a list of all photos if they visit
 
-http://localhost:3000/all_photos
+[http://localhost:3000/photos](http://localhost:3000/photos)
 
 Click this link -- you'll see that I have already completed the RCAV. Follow it through and make sure you understand what is going on at each step.
 
