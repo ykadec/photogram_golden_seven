@@ -76,10 +76,10 @@ Notice that there are already a few photos in the table -- I wrote some Ruby to 
 
 Under each photo on the index page, there is a link labeled "Show". The `href`s for these links look like:
 
- - http://localhost:3000/photo_details/1
- - http://localhost:3000/photo_details/2
- - http://localhost:3000/photo_details/3
- - http://localhost:3000/photo_details/4
+ - http://localhost:3000/photos/1
+ - http://localhost:3000/photos/2
+ - http://localhost:3000/photos/3
+ - http://localhost:3000/photos/4
 
 **Your first job** is to make these URLs work to display a photo details page for each individual photo. In particular, in the `show` action, use the number after the slash to retrieve the row from the `photo` table with the corresponding `id`, and use that row's `source` value to draw the `<img>` in the view. Toss in the `caption`, too.
 
@@ -95,7 +95,7 @@ Let's now attack the "C" in CRUD: **Create**. We want to allow users to generate
 
 The first step is: let's give the user a form to type some stuff in to. Add the following route:
 
-    get("/new_photo_form", { :controller => "photos", :action => "new_form" })
+    get("/photos/new", { :controller => "photos", :action => "new_form" })
 
 This action has a very simple job: draw a blank form in the user's browser for them to type some stuff into.
 
@@ -181,11 +181,11 @@ Write a route, action, and view to make that happen. To start you off, here's a 
 
 Under each photo on the index page, there is a link labeled "Edit". The markup for these links look like:
 
-    <a href="http://localhost:3000/edit_photo_form/<%= photo.id %>">Edit</a>
+    <a href="http://localhost:3000/photos/<%= photo.id %>/edit">Edit</a>
 
 Add a route to support this action:
 
-    get("/edit_photo_form/:id", { :controller => "photos", :action => "edit_form" })
+    get("/photos/:id/edit", { :controller => "photos", :action => "edit_form" })
 
 The job of this action should be to display a form to edit an existing photo, somewhat like the `new_form` action.
 
