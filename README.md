@@ -154,7 +154,7 @@ Fortunately, we can very easily pick which URL receives the data from a form: it
 
 Think of the action attribute as being like the `href` attribute of the `<a>` tag. It determines where the user is sent after they click. The only difference between a form and a link is that when the user clicks a form, some extra data comes along for the ride, but either way, the user is sent to a new URL.
 
-Of course, because we haven't set up a route to support `"/create_photo"`. Let's do that:
+Of course, if you click it right now, you'll receive a "NO ROUTE MATCHES" error -- because we haven't set up a route to support `"/create_photo"`. Let's do that:
 
 #### create_row
 
