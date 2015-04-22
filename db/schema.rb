@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141105190754) do
 
-  create_table "photos", force: true do |t|
+  create_table "photos", force: :cascade do |t|
     t.string   "source"
     t.text     "caption"
     t.datetime "created_at"

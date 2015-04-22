@@ -76,10 +76,10 @@ Notice that there are already a few photos in the table -- I wrote some Ruby to 
 
 Under each photo on the index page, there is a link labeled "Show". The `href`s for these links look like:
 
- - http://localhost:3000/photos/1
- - http://localhost:3000/photos/2
- - http://localhost:3000/photos/3
- - http://localhost:3000/photos/4
+ - [http://localhost:3000/photos/1](http://localhost:3000/photos/1)
+ - [http://localhost:3000/photos/2](http://localhost:3000/photos/2)
+ - [http://localhost:3000/photos/3](http://localhost:3000/photos/3)
+ - [http://localhost:3000/photos/4](http://localhost:3000/photos/4)
 
 **Your first job** is to make these URLs work to display a photo details page for each individual photo. In particular, in the `show` action, use the number after the slash to retrieve the row from the `photo` table with the corresponding `id`, and use that row's `source` value to draw the `<img>` in the view. Toss in the `caption`, too.
 
@@ -113,7 +113,7 @@ It's been a while since we've done any forms, but let's shake off the rust and r
         <input id="photo_image_url" type="text" name="the_source">
       </div>
       <div>
-        <input type="submit" value="Create photo">
+        <button>Create Photo</button>
       </div>
     </form>
 
