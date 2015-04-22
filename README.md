@@ -218,6 +218,14 @@ Add another route:
 
 The job of this action is to receive data from an edit form, retrieve the corresponding row from the table, and update it with the revised information. Give it a shot. Afterwards, display a confirmation message in the view.
 
+## Rinse and repeat
+
+This is optional, but when I was learning this material, I found sheer repetition to be really helpful in connecting the dots in my brain.
+
+A suggestion: download a fresh copy of this repo again, and repeat the whole process. Try to rely less on the instructions this time.
+
+Rinse and repeat.
+
 ## Conclusion
 
 If we can connect all these dots, we will have completed one entire database-backed CRUD web resource. Every web application is essentially just a collection of multiple of these resources; they are the building blocks of everything we do, and we'll just cruise from here.
