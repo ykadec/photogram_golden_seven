@@ -168,7 +168,13 @@ Add the action and view for that route. Put some static HTML in the view for now
  - fill in its column values by pulling the information the user typed into the form out of the `params` hash
  - save it
 
-Once done, display a confirmation message that the information was saved in the view template.
+Once this action has done its job of adding a row to the table, we have to make a choice: do we display a confirmation message in the view template, or do we simply send the user back to the index page?
+
+If the former, simply add whatever HTML to the view template you think is appropriate. It's usually helpful to at least include a link back to the index page.
+
+If you instead just want to send the user back to the index page immediately, try the following in the action instead of `render`:
+
+    redirect_to("http://localhost:3000/photos")
 
 ### DELETE (destroy)
 
@@ -178,7 +184,7 @@ Under each photo on the index page, there is a link labeled "Delete". The markup
 
 Does it make sense how that link is being put together?
 
-When I click that link, the photo should be removed and I should be shown a confirmation message.
+When I click that link, the photo should be removed and I should be sent back to the index page.
 
 Write a route, action, and view to make that happen. To start you off, here's a route:
 
@@ -216,7 +222,9 @@ Add another route:
 
     get("/update_photo/:id", { :controller => "photos", :action => "update_row" })
 
-The job of this action is to receive data from an edit form, retrieve the corresponding row from the table, and update it with the revised information. Give it a shot. Afterwards, display a confirmation message in the view.
+The job of this action is to receive data from an edit form, retrieve the corresponding row from the table, and update it with the revised information. Give it a shot.
+
+Afterwards, redirect the user to the details page of the photo that was just edited.
 
 ## Rinse and repeat
 
