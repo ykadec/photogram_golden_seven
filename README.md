@@ -251,4 +251,4 @@ Connect [Bootstrap][2] or a [Bootswatch][3] and make the index page look similar
   [1]: https://gist.github.com/rbetina/bb6336ead63080be2ff4
   [2]: http://www.bootstrapcdn.com/#quickstart_tab
   [3]: http://www.bootstrapcdn.com/#bootswatch_tab
-  [4]: http://htmlpreview.github.io/?https://github.com/boothappdev/bootstrap_exercises/blob/master/photogram/solution.html
+  [4]: http://photogram-golden-7.herokuapp.com/mockup.html
