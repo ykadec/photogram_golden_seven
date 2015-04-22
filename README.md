@@ -106,6 +106,8 @@ The first step is: let's give the user a form to type some stuff in to. Add the 
 
     get("/photos/new", { :controller => "photos", :action => "new_form" })
 
+**Note: If you add this below the `show` route, Rails will get confused. (Why?) Add this route above the show route instead.**
+
 This action has a very simple job: draw a blank form in the user's browser for them to type some stuff into.
 
 It's been a while since we've done any forms, but let's shake off the rust and recall our Essential HTML (refer to that repository if you need to) to craft a form for a photo with two inputs: one for the image's URL and one for a caption. Complete the RCAV and add the following HTML in the view:
