@@ -46,10 +46,11 @@ Let's get started.
 
 ## The Target
 
-To start with, we'll keep it simple and manage just one resource: photos. Our goal is to build an app that lets users submit URLs of photos and add captions for them.
+To start with, we'll keep it simple and manage just one resource: photos. Our goal is to build an app that lets users submit URLs of photos and add captions for them, like this:
+
+[http://photogram-golden-7.herokuapp.com](http://photogram-golden-7.herokuapp.com)
 
 Eventually, we'll add the ability to sign up, upload photos, and follow other users, and we'll wind up building Instagram. But for now, anonymous visitors will simply copy-paste the URLs of images that are already on the Internet.
-
 ## Setup
 
  1. Read the instructions completely.
