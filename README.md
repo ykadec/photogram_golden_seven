@@ -247,6 +247,8 @@ Struggle with it; **come up with questions**.
 
 Connect [Bootstrap][2] or a [Bootswatch][3] and make the index page look similar to [this][4], but without the user avatars and comments.
 
+You can find and modify the `<head>` and other boilerplate that wrap all of your view templates in `/app/views/layouts/application.html.erb`.
+
 
   [1]: https://gist.github.com/rbetina/bb6336ead63080be2ff4
   [2]: http://www.bootstrapcdn.com/#quickstart_tab
