@@ -24,18 +24,22 @@ Then we need to give the users a way to visit that URL (there's only two ways: e
 For each web resource, we usually support seven actions (with some exceptions, like Twitter not supporting editing of tweets). **The Golden Seven** actions are:
 
 #### Create
+
  - new_form: displays a blank form to the user
  - create_row: receives info from the new form and inserts a row into the table
 
 #### Read
+
  - index: displays a list of multiple rows
  - show: displays the details of one row
 
 #### Update
+
  - edit_form: displays a pre-populated form to the user with existing data
  - update_row: receives info from the edit form and updates a row in the table
 
 #### Delete
+
  - destroy: removes a row from the table
 
 Let's get started.
@@ -59,18 +63,23 @@ Eventually, we'll add the ability to sign up, upload photos, and follow other us
 
 ### READ (index, show)
 
-Once you run through the setup, you will already have a table created called `photos` that has two columns in it: `source` (where we'll store the URL of each photo), and `caption`. I wrote the migration to create this table for you, and added the model file, so you don't need to worry about that step.
+Once you run through the setup, you will already have
 
-I have also already added two routes:
+ - I've created table created called `photos` that has two columns in it:
+  - `source` (where we'll store the URL of each photo)
+  - `caption`
+ - **I wrote the migration to create this table for you, and added the model file, so you don't need to worry about that step.**
+ - I've added seven rows to the Photos table already.
+ - I have also already added two routes:
+  - `get("/photos",     { :controller => "photos", :action => "index" })`
+  - `get("/photos/:id", { :controller => "photos", :action => "show" })`
+  - (as well as a route for the bare domain, which also goes to the `index` action)
 
-    get("/photos",     { :controller => "photos", :action => "index" })
-    get("/photos/:id", { :controller => "photos", :action => "show" })
-
-(as well as a route for the bare domain, which also goes to the `index` action). The first one is to let users see a list of all photos if they visit
+The first URL is to let users see a list of all photos if they visit
 
 [http://localhost:3000/photos](http://localhost:3000/photos)
 
-Click this link -- you'll see that I have already completed the RCAV. Follow it through and make sure you understand what is going on at each step.
+Click this link -- you'll see that I have already completed the RCAV. Follow it through each step, route-controller-action-view, and make sure you understand what is going on at each step.
 
 Notice that there are already a few photos in the table -- I wrote some Ruby to pre-populate your table with a few rows, so that you can get straight to work, and you ran it when you did `rake db:seed`. If you like, you can go into your `rails console` and add a few more photos of your choosing, by using your [CRUD with Ruby][1] skills. The index page will grow as you do this.
 
